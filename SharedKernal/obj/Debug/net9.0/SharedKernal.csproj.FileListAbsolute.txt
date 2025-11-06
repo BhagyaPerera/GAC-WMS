@@ -1,0 +1,92 @@
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\SharedKernal.exe
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\SharedKernal.deps.json
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\SharedKernal.runtimeconfig.json
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\SharedKernal.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\SharedKernal.pdb
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Ardalis.Specification.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\GAC\GAC-WMS\SharedKernal\obj\Debug\net9.0\SharedKernal.csproj.AssemblyReference.cache
+C:\GAC\GAC-WMS\SharedKernal\obj\Debug\net9.0\SharedKernal.GeneratedMSBuildEditorConfig.editorconfig
+C:\GAC\GAC-WMS\SharedKernal\obj\Debug\net9.0\SharedKernal.AssemblyInfoInputs.cache
+C:\GAC\GAC-WMS\SharedKernal\obj\Debug\net9.0\SharedKernal.AssemblyInfo.cs
+C:\GAC\GAC-WMS\SharedKernal\obj\Debug\net9.0\SharedKernal.csproj.CoreCompileInputs.cache
+C:\GAC\GAC-WMS\SharedKernal\obj\Debug\net9.0\SharedKernal.sourcelink.json
+C:\GAC\GAC-WMS\SharedKernal\obj\Debug\net9.0\SharedKe.ACFB6FA3.Up2Date
+C:\GAC\GAC-WMS\SharedKernal\obj\Debug\net9.0\SharedKernal.dll
+C:\GAC\GAC-WMS\SharedKernal\obj\Debug\net9.0\refint\SharedKernal.dll
+C:\GAC\GAC-WMS\SharedKernal\obj\Debug\net9.0\SharedKernal.pdb
+C:\GAC\GAC-WMS\SharedKernal\obj\Debug\net9.0\SharedKernal.genruntimeconfig.cache
+C:\GAC\GAC-WMS\SharedKernal\obj\Debug\net9.0\ref\SharedKernal.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Polly.dll
+C:\GAC\GAC-WMS\SharedKernal\bin\Debug\net9.0\Polly.Core.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\SharedKernal.exe
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\SharedKernal.deps.json
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\SharedKernal.runtimeconfig.json
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\SharedKernal.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\SharedKernal.pdb
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Ardalis.GuardClauses.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Ardalis.Specification.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.ObjectPool.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Newtonsoft.Json.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Polly.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\Polly.Core.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\RabbitMQ.Client.dll
+C:\GAC Assignment\SharedKernal\bin\Debug\net9.0\RabbitMQ.Client.Core.DependencyInjection.dll
+C:\GAC Assignment\SharedKernal\obj\Debug\net9.0\SharedKernal.csproj.AssemblyReference.cache
+C:\GAC Assignment\SharedKernal\obj\Debug\net9.0\SharedKernal.GeneratedMSBuildEditorConfig.editorconfig
+C:\GAC Assignment\SharedKernal\obj\Debug\net9.0\SharedKernal.AssemblyInfoInputs.cache
+C:\GAC Assignment\SharedKernal\obj\Debug\net9.0\SharedKernal.AssemblyInfo.cs
+C:\GAC Assignment\SharedKernal\obj\Debug\net9.0\SharedKernal.csproj.CoreCompileInputs.cache
+C:\GAC Assignment\SharedKernal\obj\Debug\net9.0\SharedKernal.sourcelink.json
+C:\GAC Assignment\SharedKernal\obj\Debug\net9.0\SharedKe.ACFB6FA3.Up2Date
+C:\GAC Assignment\SharedKernal\obj\Debug\net9.0\SharedKernal.dll
+C:\GAC Assignment\SharedKernal\obj\Debug\net9.0\refint\SharedKernal.dll
+C:\GAC Assignment\SharedKernal\obj\Debug\net9.0\SharedKernal.pdb
+C:\GAC Assignment\SharedKernal\obj\Debug\net9.0\SharedKernal.genruntimeconfig.cache
+C:\GAC Assignment\SharedKernal\obj\Debug\net9.0\ref\SharedKernal.dll
