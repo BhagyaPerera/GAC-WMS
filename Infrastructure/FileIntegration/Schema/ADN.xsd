@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://schemas.gacwms.com/SalesOrder"
+           xmlns="http://schemas.gacwms.com/SalesOrder"
+           elementFormDefault="qualified">
+
+	<!-- Root element -->
+	<xs:element name="SalesOrder" type="SalesOrderType"/>
+
+	<!-- =======================
+       Complex Types
+  ======================= -->
+
+	<!-- SalesOrder -->
+	<xs:complexType name="SalesOrderType">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="OrderNo" type="xs:string"/>
+			<xs:element name="ProcessingDate" type="xs:dateTime"/>
+			<xs:element name="Customer" type="CustomerType"/>
+			<xs:element name="ShipmentAddress" type="xs:string"/>
+			<xs:element name="Status" type="xs:string" default="Created"/>
+			<xs:element name="Lines" type="SalesOrderLineListType"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- SalesOrderLine List -->
+	<xs:complexType name="SalesOrderLineListType">
+		<xs:sequence>
+			<xs:element name="Line" type="SalesOrderLineType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- SalesOrderLine -->
+	<xs:complexType name="SalesOrderLineType">
+		<xs:sequence>
+			<xs:element name="Id" type="xs:string"/>
+			<xs:element name="SalesOrderId" type="xs:string"/>
+			<xs:element name="Product" type="ProductType"/>
+			<xs:element name="Quantity" type="xs:decimal"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Product -->
+	<xs:complexType name="ProductType">
+		<xs:sequence>
+			<xs:element name="ProductCode" type="xs:string"/>
+			<xs:element name="Title" type="xs:string" minOccurs="0"/>
+			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+			<xs:element name="Length" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="Width" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="Height" type="xs:decimal" minOccurs="0"/>
+			<xs:element name="Weight" type="xs:decimal" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- Customer -->
+	<xs:complexType name="CustomerType">
+		<xs:sequence>
+			<xs:element name="CustomerCode" type="xs:string"/>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Address" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
