@@ -218,8 +218,8 @@ Default admin created via IdentitySeeder
 
 
 {
-  "email": "admin@gac.com",
-  "password": "Admin@123"
+  "email": "u001@gmail.com",
+  "password": "User001@123"
 }
 
 
