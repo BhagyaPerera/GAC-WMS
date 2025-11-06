@@ -1,28 +1,33 @@
+﻿using API.Background;
+using Core.Entities.Identity;
+using Core.EventHandlers;
+using Core.Events.ApplicationEvents;
+using Core.Interfaces;
+using Core.Services;
+using Core.Services.Identity;
+using Infrastructure.Messaging.RabbitMQ;
+using Infrastructure.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.ObjectPool;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Quartz;
+using RabbitMQ.Client;
+using SharedKernal.Interfaces;
 using System.Text;
-using API.Background;
-using Core.Services;
-using Core.Entities.Identity;
-using Core.Interfaces;
-using Infrastructure.Persistence;
-using Infrastructure.Messaging.RabbitMQ;
-using Core.Services.Identity;
-using Core.Events.ApplicationEvents;
-using Core.EventHandlers;
+using System.Diagnostics.Tracing;
+
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
 
 // =============================================================
-// 1?.Controllers + Swagger Setup
+// 1️⃣ Controllers + Swagger Setup
 // =============================================================
 builder.Services.AddControllers();
-
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(c =>
@@ -58,24 +63,25 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 // =============================================================
-// 2?.Database (EF Core + Identity)
+// 2️⃣ Database (EF Core + Identity)
 // =============================================================
-builder.Services.AddDbContext<IntegrationDbContext>(opts =>
+builder.Services.AddDbContext<IntegrationDbContext>(options =>
 {
-    var connStr = configuration.GetConnectionString("DefaultConnection");
-    opts.UseSqlServer(connStr);
+    options.UseSqlServer(
+        configuration.GetConnectionString("DefaultConnection"),
+        b => b.MigrationsAssembly("GAC-WMS") // specify migrations assembly
+    );
 });
 
-// Identity configuration
 builder.Services.AddIdentity<User, Role>()
     .AddEntityFrameworkStores<IntegrationDbContext>()
     .AddDefaultTokenProviders();
 
 // =============================================================
-// 3?. JWT Authentication Configuration
+// 3️⃣ JWT Authentication Configuration
 // =============================================================
 var jwtSection = configuration.GetSection("Jwt");
-var key = Encoding.UTF8.GetBytes(jwtSection["Key"]);
+var key = Encoding.UTF8.GetBytes(jwtSection["Key"] ?? throw new Exception("JWT key missing"));
 
 builder.Services.AddAuthentication(options =>
 {
@@ -101,14 +107,23 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddAuthorization();
 
 // =============================================================
-// 4?.RabbitMQ Configuration
+// 4️⃣ Caching + Repositories
 // =============================================================
-builder.Services.Configure<RabbitMqConfiguration>(configuration.GetSection("RabbitMq"));
-builder.Services.AddSingleton<RabbitMqPublisher>();
+builder.Services.AddMemoryCache();
+builder.Services.AddScoped(typeof(IReadRepository<>), typeof(CachedRepository<>));
+builder.Services.AddScoped(typeof(IRepository<>), typeof(ApiEfRepository<>));
+
+// =============================================================
+// 5️⃣ RabbitMQ Configuration
+// =============================================================
+builder.Services.AddSingleton<ObjectPoolProvider, DefaultObjectPoolProvider>();
+builder.Services.Configure<RabbitMqConfiguration>(configuration.GetSection("RabbitMQ"));
+builder.Services.AddSingleton<IPooledObjectPolicy<IModel>, RabbitMqModelPooledObjectPolicy>();
+builder.Services.AddSingleton<IMessagePublisher, RabbitMqPublisher>();
 builder.Services.AddHostedService<RabbitMqHostedService>();
 
 // =============================================================
-// 5?. Application Services
+// 6️⃣ Application & Domain Services
 // =============================================================
 builder.Services.AddScoped<PurchaseOrdersService>();
 builder.Services.AddScoped<SalesOrdersService>();
@@ -117,44 +132,24 @@ builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<AuthService>();
 
 // =============================================================
-// 6?. Integration Event Handlers
+// 7️⃣ Integration Event Handlers
 // =============================================================
 builder.Services.AddScoped<IIntegrationEventHandler<PurchaseOrderCreateEvent>, PurchaseOrderCreatedEventHandler>();
 builder.Services.AddScoped<IIntegrationEventHandler<SalesOrderCreateEvent>, SalesOrderCreatedEventHandler>();
 
+
+
 // =============================================================
-// 7?. Background Services
+// 9️⃣ Additional Background Services
 // =============================================================
-
-
-//builder.Services.AddQuartz(q =>
-//{
-//    // Register the job
-//    var jobKey = new JobKey("FileIntegrationJob");
-//    q.AddJob<FileIntegrationJob>(opts => opts.WithIdentity(jobKey));
-
-//    // Schedule it with a CRON expression (every 5 minutes)
-//    q.AddTrigger(opts => opts
-//        .ForJob(jobKey)
-//        .WithIdentity("FileIntegrationJob-trigger")
-//        .WithCronSchedule("0 */5 * * * ?")  // Every 5 minutes
-//    );
-//});
-
-//builder.Services.AddQuartzHostedService(opt =>
-//{
-//    opt.WaitForJobsToComplete = true;
-//});
-
 builder.Services.AddHttpClient();
 builder.Services.AddHostedService<FailedMessagesScheduler>();
 
 // =============================================================
-// 8?. Build Application + Seed Roles/Admin
+// 🔟 Build Application & Seed Roles/Admin
 // =============================================================
 var app = builder.Build();
 
-// Seed Roles & Default Admin
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -162,7 +157,7 @@ using (var scope = app.Services.CreateScope())
 }
 
 // =============================================================
-// 9?. Middleware Pipeline
+// 🔟 Middleware Pipeline
 // =============================================================
 if (app.Environment.IsDevelopment())
 {
@@ -170,15 +165,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "GAC WMS Integration API v1");
-        c.RoutePrefix = string.Empty; // Swagger at root
+        c.RoutePrefix = string.Empty;
     });
 }
 
 app.UseHttpsRedirection();
-
-app.UseAuthentication();   // ? Must come before Authorization
+app.UseAuthentication();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1uJDOHOCQws=",
+  "dgSpecHash": "Hg7l+gzhSzM=",
   "success": true,
   "projectFilePath": "C:\\GAC Assignment\\Core\\Core.csproj",
   "expectedPackageFiles": [
@@ -38,6 +38,7 @@
     "C:\\Users\\wbmad\\.nuget\\packages\\polly.core\\8.6.4\\polly.core.8.6.4.nupkg.sha512",
     "C:\\Users\\wbmad\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
     "C:\\Users\\wbmad\\.nuget\\packages\\rabbitmq.client.core.dependencyinjection\\5.0.0\\rabbitmq.client.core.dependencyinjection.5.0.0.nupkg.sha512",
+    "C:\\Users\\wbmad\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.14.0\\system.identitymodel.tokens.jwt.8.14.0.nupkg.sha512",
     "C:\\Users\\wbmad\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\wbmad\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512"
   ],

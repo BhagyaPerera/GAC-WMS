@@ -39,6 +39,7 @@ C:\GAC Assignment\Core\bin\Debug\net9.0\Polly.dll
 C:\GAC Assignment\Core\bin\Debug\net9.0\Polly.Core.dll
 C:\GAC Assignment\Core\bin\Debug\net9.0\RabbitMQ.Client.dll
 C:\GAC Assignment\Core\bin\Debug\net9.0\RabbitMQ.Client.Core.DependencyInjection.dll
+C:\GAC Assignment\Core\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
 C:\GAC Assignment\Core\bin\Debug\net9.0\SharedKernal.dll
 C:\GAC Assignment\Core\bin\Debug\net9.0\SharedKernal.pdb
 C:\GAC Assignment\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache

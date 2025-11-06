@@ -7,7 +7,7 @@
         "Action": "Start"
       },
       {
-        "Path": "..\\FileIntegration-PollingCLI\\PollingCLI.csproj",
+        "Path": "..\\Polling\\Polling.csproj",
         "Action": "Start"
       }
     ]

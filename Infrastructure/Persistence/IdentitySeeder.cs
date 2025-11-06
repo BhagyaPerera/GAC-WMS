@@ -45,6 +45,7 @@ namespace Infrastructure.Persistence
                 var newAdmin = new User
                 {
                     Id = Guid.NewGuid(),
+                    UserId="admin001",
                     FullName = "System Admin",
                     UserName = adminEmail,
                     Email = adminEmail,
