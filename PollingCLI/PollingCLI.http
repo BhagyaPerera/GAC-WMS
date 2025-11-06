@@ -1,0 +1,6 @@
+@PollingCLI_HostAddress = http://localhost:5130
+
+GET {{PollingCLI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
