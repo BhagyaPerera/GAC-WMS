@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="../Core/Core.csproj" Id="1c1815a2-78b2-49f6-866f-5c2c64385b56" />
+    <Project Path="../Infrastructure/Infrastructure.csproj" Id="ae10b97c-c60a-410d-af25-b6b444dd7e71" />
+    <Project Path="../SharedKernal/SharedKernal.csproj" Id="a253227e-a68c-44b5-a9d1-ca1d516b2983" />
+    <Project Path="GAC-WMS.csproj" />
+  </Folder>
+</Solution>
